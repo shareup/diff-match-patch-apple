@@ -6,7 +6,8 @@ let package = Package(
     products: [
         .library(
             name: "DiffMatchPatch",
-            targets: ["DiffMatchPatch"]),
+            targets: ["DiffMatchPatch"]
+        ),
     ],
     targets: [
         .target(
@@ -19,6 +20,7 @@ let package = Package(
         ),
         .testTarget(
             name: "DiffMatchPatchTests",
-            dependencies: ["DiffMatchPatch"]),
+            dependencies: ["DiffMatchPatch"]
+        ),
     ]
 )

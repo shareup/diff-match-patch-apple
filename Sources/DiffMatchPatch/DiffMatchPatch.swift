@@ -1,5 +1,5 @@
-import Foundation
 import diff_match_patch
+import Foundation
 
 public func threeWayMerge(
     old: String,
@@ -7,7 +7,7 @@ public func threeWayMerge(
     base: String
 ) throws -> String {
     let dmp = DiffMatchPatch()
-    
+
     guard let patch = dmp.patch_make(
         fromOldString: old,
         andNewString: new
@@ -21,7 +21,7 @@ public func threeWayMerge(
     ).first as? String else {
         throw DiffMatchPatchError.couldNotApplyPatch
     }
-    
+
     return result
 }
 
